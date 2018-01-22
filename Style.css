@@ -1,0 +1,35 @@
+table {			
+		text-align:center;
+		font-family: Ayuthaya;
+    	font-size  : 12px;
+    	padding: 0px;
+		}
+body{	
+		background-image:url(img/Bg.jpg);
+		color:white;
+	}
+a:hover{
+		color: #9999ff;
+}
+a:visited{
+	color: white;
+}
+a:active{
+	color: #66ebff;
+}
+input[type='text'] {
+          		width: 100%;
+          		height: 20px;
+          		border: 0px;
+          		background-color: #c4afa7;
+          		font-family: Ayuthaya;
+    			font-size  : 12px;
+    			text-align:center;
+    			opacity: 0.2;
+    			border-color: black;
+    			border-width: 2px;
+    			border-style: solid;
+			}
+p{
+	font-size: 7px;
+	}
