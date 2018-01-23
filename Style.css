@@ -322,22 +322,101 @@ input, select {
 }
 .login-body {
 				background-image:url(img/Bg_login.png);
+        background-attachment: fixed;
 }
-
-
+/*PJ.html*/
+.cuadro{
+  width: 800px;
+  height: 97%;
+  background-color: #f6f4ee;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  border-radius: 5px; 
+  padding: 70px 40px;
+  text-align: center;
+}
+.cuadro h2 {
+  margin: 0;
+  padding-top: 20px;
+  font-family: Avenir;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: black;
+}
+.cuadro ul{
+  float: left;
+}
+.cuadro ul li{
+  float: left;
+  list-style: none;
+}
+.cuadro ul li a{
+  font-family: century gothic;
+  font-size: 25px;
+  color: black;
+  padding-left: 40px;
+}
+.cuadro form{
+  float: left;
+  margin-left: 40px;
+}
+.cuadro form button{
+          width: 100px;
+          height: 70px;
+          margin-bottom: 5px;
+          font-family      : Avenir;
+          font-size        : 16px;
+          color            : #6a2219;
+          background-color : #e4dece;
+          border           : none;
+          padding: 10px;
+          border-radius: 5px;
+          text-align: center;
+}
+.cuadro form button:hover{
+          width: 100px;
+          height: 70px;
+          margin-bottom: 5px;
+          font-family      : Avenir;
+          font-size        : 16px;
+          color            : #6a2219;
+          background-color : #f0ebdc;
+          border           : 1px solid black;
+          padding: 10px;
+          border-radius: 5px;
+          text-align: center;
+          cursor: pointer;
+}
+.cuadro form button:active{
+          width: 100px;
+          height: 70px;
+          margin-bottom: 5px;
+          font-family      : Avenir;
+          font-size        : 16px;
+          color            : #6a2219;
+          background-color : #ccc8bb;
+          border           : 1px solid black;
+          padding: 10px;
+          border-radius: 5px;
+          text-align: center;
+          cursor: pointer;
+}
 /* CS.html*/
 td{
 	padding: 5px;
 }
 body{	
-		background-image:url(img/Bg.jpg);
-		color:white;
-		
+		background-color:  #6a2219;
 	}
 table {			
 		text-align:center;
 		font-family: Ayuthaya;
-    	font-size  : 12px;
+    font-size  : 12px;
 		}
 a{
   text-decoration: none;
