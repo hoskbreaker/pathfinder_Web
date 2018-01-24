@@ -1,6 +1,6 @@
-// <?php
-// session_start();
-// ?>
+<?php
+session_start();
+?>
 
 <?php
 
@@ -18,6 +18,7 @@ if ($conexion->connect_error) {
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+$hash = password_hash($password, PASSWORD_BCRYPT);
  
 $sql = "SELECT * FROM $tbl_name WHERE nombre_usuario = '$username'";
 
@@ -25,9 +26,9 @@ $result = $conexion->query($sql);
 
 
 if ($result->num_rows > 0) {     
- }
  $row = $result->fetch_array(MYSQLI_ASSOC);
- if (password_verify($password, $row['password'])) { 
+ }
+ if (password_verify($password, $hash)) { 
  
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = $username;
@@ -40,7 +41,7 @@ if ($result->num_rows > 0) {
  } else { 
    echo "Username o Password estan incorrectos.";
 
-   echo "<br><a href='login.html'>Volver a Intentarlo</a>";
+   echo "<br><a href='Log_in.html'>Volver a Intentarlo</a>";
  }
  mysqli_close($conexion); 
  ?>
