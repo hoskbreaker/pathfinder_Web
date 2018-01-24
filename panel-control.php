@@ -31,7 +31,7 @@ exit;
 
 <body>
 <h1>Panel de Control</h1>
-<p>Aqui hirian los enlaces que le permitirian al usuario
+<p>Aqui van los enlaces que le permitan al usuario
 editar su perfil o cualquier otra cosa que desees.</p>
 
 <ul>

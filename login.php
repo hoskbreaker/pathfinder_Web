@@ -1,10 +1,10 @@
-<?php
-session_start();
-?>
+// <?php
+// session_start();
+// ?>
 
 <?php
 
-$host_db = "81.44.52.97";
+$host_db = "localhost";
 $user_db = "pi";
 $pass_db = "raspberry";
 $db_name = "login";
