@@ -8,94 +8,112 @@
 </head>
 
 <body>
-	<center>
-	<h1>Hoja de Personaje</h1>
-	<a href="inicio.html">Inicio</a>
-	<h2>General</h2>
-	<form>
-		<table width="800px">
-			<tr>
-				<td colspan="3">Nombre: <input type="text" /></td> <td>Alineamiento: <input type="text" /></td> <td colspan="2">Nombre del Jugador: <input type="text" /></td>
-			</tr>
-			<tr>
-				<td colspan="2">Clase y Nivel: <input type="text" /></td> <td colspan="2">Deidad: <input type="text" /></td> <td colspan="2">Tierra natal: <input type="text" /></td>
-			</tr>
-			<tr>
-				<td>Raza: <input type="text" /></td> <td>Tamaño: <input type="text" /></td> <td>Sexo: <input type="text" /></td> <td>Edad: <input type="text" /></td> <td>Peso: <input type="text" /></td> <td>Ojos: <input type="text" /></td>
-			</tr> 
-		</table>
-		<table width="800px">
-			<tr>
-				<td><h4>Fue</h4></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td>Des</td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td>Con</td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-			</tr>
-			<tr>
-				<td><p>Fuerza</p></td>
-				<td><p>Puntuacion de Habilidad</p></td>
-				<td><p>Modificador de Habilidad</p></td>
-				<td><p>Puntuacion Temporal</p></td>
-				<td><p>Modificador Temporal</p></td>
-				<td><p>Destreza</p></td>
-				<td><p>Puntuacion de Habilidad</p></td>
-				<td><p>Modificador de Habilidad</p></td>
-				<td><p>Puntuacion Temporal</p></td>
-				<td><p>Modificador Temporal</p></td>
-				<td><p>Constitucion</p></td>
-				<td><p>Puntuacion de Habilidad</p></td>
-				<td><p>Modificador de Habilidad</p></td>
-				<td><p>Puntuacion Temporal</p></td>
-				<td><p>Modificador Temporal</p></td>
-			</tr>
-			<tr>
-				<td>Int</td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td>Sab</td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td>Car</td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-			</tr>
-			<tr>
-				<td><p>Inteligencia</p></td>
-				<td><p>Puntuacion de Habilidad</p></td>
-				<td><p>Modificador de Habilidad</p></td>
-				<td><p>Puntuacion Temporal</p></td>
-				<td><p>Modificador Temporal</p></td>
-				<td><p>Sabiduria</p></td>
-				<td><p>Puntuacion de Habilidad</p></td>
-				<td><p>Modificador de Habilidad</p></td>
-				<td><p>Puntuacion Temporal</p></td>
-				<td><p>Modificador Temporal</p></td>
-				<td><p>Carisma</p></td>
-				<td><p>Puntuacion de Habilidad</p></td>
-				<td><p>Modificador de Habilidad</p></td>
-				<td><p>Puntuacion Temporal</p></td>
-				<td><p>Modificador Temporal</p></td>
-			</tr>
-		</table>
-	</form>
-	</center>
+	<div class="cuadro">
+		<div class="titulo">
+			<ul>
+				<li><a href="inicio.html">Home</a></li>	
+			</ul>
+			<h2>Hoja de Personaje</h2>
+		</div>
+		<div class="encuadre">
+			<h3>General</h3>
+			<form>
+				<table>
+					<tr>
+						<td colspan="3">Nombre: <input type="text" id="nombre" /></td>
+						<td>Alineamiento: <input type="text" id="alineamiento" /></td> 
+						<td colspan="2">Nombre del Jugador: <input type="text" id="jugador" /></td>
+					</tr>
+					<tr>
+						<td colspan="2">Clase y Nivel: <input type="text" id="clasniv" /></td> 
+						<td colspan="2">Deidad: <input type="text" id="deidad" /></td> 
+						<td colspan="2">Tierra natal: <input type="text" id="homeland" /></td>
+					</tr>
+					<tr>
+						<td>Raza: <input type="text" id="raza" /></td> 
+						<td>Tamaño: <input type="text" id="tam" /></td> 
+						<td>Sexo: <input type="text" id="sexo" /></td> 
+						<td>Edad: <input type="text" id="edad" /></td> 
+						<td>Peso: <input type="text" id="peso" /></td> 
+						<td>Ojos: <input type="text" id="ojos" /></td>
+					</tr> 
+				</table>
+				<h3>Estadistica</h3>
+				<table class="estadistica">
+					<tr>
+						<td>Fue</td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td>Des</td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td>Con</td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+					</tr>
+					<tr class="descripcion">
+						<td>Fuerza</td>
+						<td>Puntuación</td>
+						<td>Modificador</td>
+						<td>Puntuacion Temporal</td>
+						<td>Modificador Temporal</td>
+						<td>Destreza</td>
+						<td>Puntuación</td>
+						<td>Modificador</td>
+						<td>Puntuacion Temporal</td>
+						<td>Modificador Temporal</td>
+						<td>Constitución</td>
+						<td>Puntuación</td>
+						<td>Modificador</td>
+						<td>Puntuacion Temporal</td>
+						<td>Modificador Temporal</td>
+					</tr>
+					<tr>
+						<td>Int</td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td>Sab</td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td>Car</td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+						<td><input type="text" /></td>
+					</tr>
+				</table>
+				<table >
+					<tr class="descripcion">
+						<td>Inteligencia</td>
+						<td>Puntuación</td>
+						<td>Modificador</td>
+						<td>Puntuacion Temporal</td>
+						<td>Modificador Temporal</td>
+						<td>Sabiduria</td>
+						<td>Puntuación</td>
+						<td>Modificador</td>
+						<td>Puntuacion Temporal</td>
+						<td>Modificador Temporal</td>
+						<td>Carisma</td>
+						<td>Puntuación</td>
+						<td>Modificador</td>
+						<td>Puntuacion Temporal</td>
+						<td>Modificador Temporal</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
 	
 </body>
 

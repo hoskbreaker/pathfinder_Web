@@ -163,9 +163,9 @@ input, select {
               padding: 0px 10px;
           		background-color: #ffffff;  		
           		font-family: Ayuthaya;
-    			font-size  : 12px;
-    			text-align:center;
-    			color: black;
+    			   font-size  : 12px;
+    			   text-align:center;
+    			   color: black;
 			}
 .login-box form input[type='password'] {  
           		width: 200px;
@@ -366,26 +366,16 @@ input, select {
 /*PJ.html*/
 .cuadro{
   width: 800px;
-  height: 97%;
+  height: 100%;
   background-color: #f6f4ee;
-  color: #fff;
+  color: #6a2219;
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%,-50%);
   box-sizing: border-box;
   border-radius: 5px; 
-  padding: 70px 40px;
   text-align: center;
-}
-.cuadro h2 {
-  margin: 0;
-  padding-top: 20px;
-  font-family: Avenir;
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: black;
 }
 .cuadro ul{
   float: left;
@@ -446,17 +436,83 @@ input, select {
           cursor: pointer;
 }
 /* CS.html*/
-td{
-	padding: 5px;
+.titulo{
+  width: 800px;
+  height: 50px;
+  position: top;
+  text-align: center;
+  padding: 50px 50px; 
 }
+.titulo ul{
+  float: left;
+}
+.titulo ul li{
+  float: left;
+  list-style: none;
+}
+.titulo ul li a{
+  font-family: century gothic;
+  font-size: 25px;
+  color: black;
+}
+.encuadre{
+  width: 800px;
+  height: 100%;
+  position: bottom;
+  padding-left: 30px;
+}
+.encuadre table{
+    width: 600px;
+    text-align:center;
+    font-family: Ayuthaya;
+    font-size  : 12px;
+    margin: auto; 
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+.encuadre table input[type='text']{
+            width: 100%;
+            height: 25px;
+            margin: auto; 
+            background-color: white;      
+            font-family: Ayuthaya;
+            font-size  : 12px;
+            text-align: center;
+            color: black;
+            border: 1px solid #6a2219;
+}
+.encuadre table td{
+    padding: 4px 4px;
+}
+.estadistica tr{
+  height: 40px;
+}
+.estadistica tr td input[type='text']{
+  height: 40px;
+  font-size: 14px;
+}
+.descripcion td{
+  font-size: 6px;
+  
+}
+/*Toda la pagina web*/
 body{	
 		background-color:  #6a2219;
 	}
-table {			
-		text-align:center;
-		font-family: Ayuthaya;
-    font-size  : 12px;
-		}
+h2 {
+  font-family: Avenir;
+  font-size: 30px;
+  float: left;
+  padding-left: 125px;
+  color: #6a2219;
+}
+h3{
+  margin-bottom: 10px;
+  font-family: Avenir;
+  font-size: 20px;
+  text-align: center;
+  color: #6a2219;
+}
 a{
   text-decoration: none;
 }
