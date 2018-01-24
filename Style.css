@@ -104,13 +104,56 @@ input, select {
 
 
 /* Login*/
+.cuadro-login{
+  /*width: 320px;
+  height: 420px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  border-radius: 5px; 
+  padding: 70px 30px;
+  text-align: center;*/
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  border-radius: 5px; 
+  text-align: center;
+}
+.map{
+  width: 500px;
+  height: 150px;
+  position: bottom;
+  background-image: url(img/map.jpg);
+  background-size: 500px;
+  border-radius: 0px 0px 5px 5px;
+}
+.login-box{
+  width: 500px;
+  height: 350px;
+  background-color: #f6f4ee;
+  color: #fff;
+  position: top;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0px 0px;
+  padding: 70px 40px;
+  text-align: center;
+}
 .login-box h2 {
 	margin: 0;
 	padding: 0 0 20px;
 	font-family: Avenir;
-	font-size: 27px;
+	font-size: 32px;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
+  color: #6a2219;
 }
 .login-box form input[type='text'] {
           		width: 200px;
@@ -175,7 +218,7 @@ input, select {
 .login-box a {
           font-family      : Avenir;
           font-size        : 14px;
-          color            : white;
+          color            : #6a2219;
     }
 .login-box a:hover {
           font-family      : Avenir;
@@ -190,26 +233,19 @@ input, select {
 .login-box a:visited {
           font-family      : Avenir;
           font-size        : 14px;
-          color            : white;
+          color            : #6a2219;
     }
-.login-box{
-	width: 320px;
-	height: 420px;
-	background: rgba(0,0,0,0.6);
-	color: #fff;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transform: translate(-50%,-50%);
-	box-sizing: border-box;
-	border-radius: 5px; 
-	padding: 70px 30px;
-	text-align: center;
-}
-.login-body {
-				background-image:url(img/Bg_login.png);
-			}
 
+.imagen_map{
+  margin: auto;
+  margin-top: 400px;
+  width: 500px;
+  height: 100px;
+  background-image: url(img/map.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
 
 /* Sign up*/
 .signup-box h2 {
@@ -218,13 +254,15 @@ input, select {
 	font-family: Avenir;
 	font-size: 27px;
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+  color: #6a2219;
 }
 .signup-box p {
 	margin-bottom: 15px;
 	font-family: Avenir;
 	font-size: 14px;
 	text-align: center;
+  color: #6a2219;
 }
 
 .signup-box input[type='text'] {
@@ -253,38 +291,44 @@ input, select {
 			}
 .signup-box form button {
           width: 120px;
+          margin: auto;
           margin-bottom: 5px;
           font-family      : Avenir;
           font-size        : 14px;
           color            : white;
           background-color : #8c8c8c;
-          border           : 1px solid black;
+          border           : 1px solid #6a2219;
           padding: 5px;
           border-radius: 5px;
+          display: block;
       }
 .signup-box form button:hover {
         width: 120px;
+        margin: auto;
         margin-bottom: 5px;
-              font-family      : Avenir;
+          font-family      : Avenir;
           font-size        : 14px;
-          color            : black;
+          color            : #6a2219;
           background-color : white;
-          border           : 1px solid white;
+          border           : 1px solid #6a2219;
           padding: 5px;
           border-radius: 5px;
           cursor: pointer;
+          display: block;
       }
 .signup-box form button:active{
-        width: 120px;
-        margin-bottom: 5px;
-              font-family      : Avenir;
+          width: 120px;
+          margin: auto;
+          margin-bottom: 5px;
+          font-family      : Avenir;
           font-size        : 14px;
-          color            : black;
+          color            : #6a2219;
           background-color : #e6e6e6;
           border           : 1px solid white;
           padding: 5px;
           border-radius: 5px;
           cursor: pointer;
+          display: block;
         }
 .signup-box a {
           font-family      : Avenir;
@@ -294,7 +338,7 @@ input, select {
 .signup-box a:hover {
           font-family      : Avenir;
           font-size        : 14px;
-          color            : #9999ff;
+          color            : #9999ff;;
     }
 .signup-box a:active {
           font-family      : Avenir;
@@ -307,23 +351,18 @@ input, select {
           color            : white;
     }
 .signup-box{
-	width: 320px;
-	height: 420px;
-	background: rgba(0,0,0,0.6);
-	color: #fff;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transform: translate(-50%,-50%);
-	box-sizing: border-box;
-	border-radius: 5px; 
-	padding: 70px 30px;
-	text-align: center;
+	 width: 500px;
+  height: 350px;
+  background-color: #f6f4ee;
+  color: #fff;
+  position: top;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0px 0px;
+  padding: 70px 40px;
+  text-align: center;
 }
-.login-body {
-				background-image:url(img/Bg_login.png);
-        background-attachment: fixed;
-}
+
+
 /*PJ.html*/
 .cuadro{
   width: 800px;
