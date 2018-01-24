@@ -36,7 +36,9 @@ if ($result->num_rows > 0) {
     $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
 
     echo "Bienvenido! " . $_SESSION['username'];
-    echo "<br><br><a href=panel-control.php>Panel de Control</a>"; 
+	sleep(3);
+	header('Location: /inicio.html');
+    /*echo "<br><br><a href=panel-control.php>Panel de Control</a>"; */
 
  } else { 
    echo "Username o Password estan incorrectos.";
