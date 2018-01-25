@@ -11,9 +11,9 @@ $pass_db = "raspberry";
 $db_name = "login";
 $tbl_name = "usuarios";
  
- $form_pass = $_POST['password'];
+ $form_pass = $_POST['pass'];
  
- $hash = password_hash($form_pass, PASSWORD_BCRYPT); 
+ //$hash = password_hash($form_pass, PASSWORD_DEFAULT); 
 
  $conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
 
@@ -35,7 +35,7 @@ $email=$_POST['email'];
 	 header("location:Log_in.html");
  }else{
 	$query = "INSERT INTO $tbl_name (username, password, email)
-		   VALUES ('$user', '$hash', '$$email')";
+		   VALUES ('$user', '$form_pass', '$email')";
 
 	if ($conexion->query($query) === TRUE) {
 	 

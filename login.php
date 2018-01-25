@@ -18,22 +18,20 @@ if ($conexion->connect_error) {
 if($_POST['user'] == '' or $_POST['pass'] == '' or $_POST['repass'] == '' or POST['email'] == '')
 { 
 	echo 'Por favor llene todos los campos.';
-	sleep(3);
 	header("location:Log_in.html");
-} else{
-	$user = $_POST['user'];
-	$password = $_POST['pass'];
 }
- $hash = password_hash($password, PASSWORD_BCRYPT); 
-$sql = "SELECT * FROM $tbl_name WHERE username = '$user'";
 
-$result = $conexion->query($sql);
+$user = $_POST['user'];
+$pass = $_POST['pass'];
+//$hash = password_hash($pass, PASSWORD_DEFAULT); 
+$sql = "SELECT id FROM $tbl_name WHERE username = '$user' and password = '$pass'";
+$result = mysqli_query($conexion,$sql);
+$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+$active = $row['active'];
 
+$count = mysqli_num_rows($result);
 
-$busqueda= mysql_query("SELECT * FROM $tbl_name where username='$user' and password='$hash'"); 
-$pul=mysql_num_rows($busqueda); 
-
-if if ($pul==1) { 
+if ($count==1) { 
  
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = $user;
@@ -43,10 +41,9 @@ if if ($pul==1) {
     echo "Logueate! " . $_SESSION['username'];
 	sleep(3);
     header("location:inicio.html");
- } else { 
+} else { 
    echo "Username o Password estan incorrectos.";
-   sleep(3);
    header("location:Log_in.html");
- }
+}
  mysqli_close($conexion); 
  ?>
