@@ -2,6 +2,11 @@
 
 <html>
 <meta charset="UTF-8">
+<?php 
+if($_SESSION["loggedin"]==False){ 
+	echo "no se ha iniciado sesion";
+	header('Location: /Log_in.html');
+}?>
 <head>
 	<title>Pathfinder</title>
 	<style type="text/css">

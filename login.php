@@ -20,9 +20,16 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $hash = password_hash($password, PASSWORD_BCRYPT);
  
-$sql = "SELECT * FROM $tbl_name WHERE nombre_usuario = '$username'";
+ if($_POST['username'] == "" && $form_pass == ""){
+	echo "<br />".'la contraseña o el usuario están vacios'. "<br />";
+	echo "<a href='signup.html'>Repita el registro por favor</a>";
+}else{
+	$sql = "SELECT * FROM $tbl_name WHERE username = '$username'";
 
-$result = $conexion->query($sql);
+	$result = $conexion->query($sql);
+}
+ 
+
 
 
 if ($result->num_rows > 0) {     
