@@ -147,74 +147,74 @@ input, select {
   text-align: center;
 }
 .login-box h1 {
-	margin: 0;
-	padding: 0 0 20px;
-	font-family: Avenir;
-	font-size: 32px;
-	text-align: center;
-	margin-bottom: 40px;
+  margin: 0;
+  padding: 0 0 20px;
+  font-family: Avenir;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
   color: #6a2219;
 }
 .login-box form input[type='text'] {
-          		width: 200px;
-          		height: 25px;
-          		border: 1px solid #6a2219;
-          		margin-bottom: 10px; 
+              width: 200px;
+              height: 25px;
+              border: 1px solid #6a2219;
+              margin-bottom: 10px; 
               padding: 0px 10px;
-          		background-color: #ffffff;  		
-          		font-family: Ayuthaya;
-    			   font-size  : 12px;
-    			   text-align:center;
-    			   color: black;
-			}
+              background-color: #ffffff;      
+              font-family: Ayuthaya;
+             font-size  : 12px;
+             text-align:center;
+             color: black;
+      }
 .login-box form input[type='password'] {  
-          		width: 200px;
-          		height: 25px;
-          		border: 1px solid #6a2219;
-          		margin-bottom: 20px;
+              width: 200px;
+              height: 25px;
+              border: 1px solid #6a2219;
+              margin-bottom: 20px;
               padding: 0px 10px;
-          		background-color: #ffffff;
-          		font-family: Ayuthaya;
-    			font-size  : 12px;
-    			text-align:left;
-    			color: black;
-    			text-align: center;
-			}
+              background-color: #ffffff;
+              font-family: Ayuthaya;
+          font-size  : 12px;
+          text-align:left;
+          color: black;
+          text-align: center;
+      }
 .login-box form button {
-				  width: 120px;
-				  margin-bottom: 5px;
+          width: 120px;
+          margin-bottom: 5px;
           font-family      : Avenir;
-    			font-size        : 14px;
-    			color            : white;
-    			background-color : #8c8c8c;
-    			border           : 1px solid black;
-    			padding: 5px;
-    			border-radius: 5px;
-			}
+          font-size        : 14px;
+          color            : white;
+          background-color : #8c8c8c;
+          border           : 1px solid black;
+          padding: 5px;
+          border-radius: 5px;
+      }
 .login-box form button:hover {
-				width: 120px;
-				margin-bottom: 5px;
-          		font-family      : Avenir;
-    			font-size        : 14px;
-    			color            : black;
-    			background-color : white;
-    			border           : 1px solid white;
-    			padding: 5px;
-    			border-radius: 5px;
-    			cursor: pointer;
-			}
+        width: 120px;
+        margin-bottom: 5px;
+              font-family      : Avenir;
+          font-size        : 14px;
+          color            : black;
+          background-color : white;
+          border           : 1px solid white;
+          padding: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+      }
 .login-box form button:active{
-				width: 120px;
-				margin-bottom: 5px;
-          		font-family      : Avenir;
-    			font-size        : 14px;
-    			color            : black;
-    			background-color : #e6e6e6;
-    			border           : 1px solid white;
-    			padding: 5px;
-    			border-radius: 5px;
-    			cursor: pointer;
-			}
+        width: 120px;
+        margin-bottom: 5px;
+              font-family      : Avenir;
+          font-size        : 14px;
+          color            : black;
+          background-color : #e6e6e6;
+          border           : 1px solid white;
+          padding: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+      }
 .login-box a {
           font-family      : Avenir;
           font-size        : 14px;
@@ -249,46 +249,46 @@ input, select {
 
 /* Sign up*/
 .signup-box h1 {
-	margin: 0;
-	padding: 0 0 20px;
-	font-family: Avenir;
-	font-size: 27px;
-	text-align: center;
-	margin-bottom: 20px;
+  margin: 0;
+  padding: 0 0 20px;
+  font-family: Avenir;
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 20px;
   color: #6a2219;
 }
 .signup-box p {
-	margin-bottom: 15px;
-	font-family: Avenir;
-	font-size: 14px;
-	text-align: center;
+  margin-bottom: 15px;
+  font-family: Avenir;
+  font-size: 14px;
+  text-align: center;
   color: #6a2219;
 }
 
 .signup-box input[type='text'] {
-          		width: 200px;
-          		height: 25px;
-          		border: 1px solid #6a2219;
-          		margin-bottom: 10px; 
-          		background-color: #ffffff;  		
-          		font-family: Ayuthaya;
-    			font-size  : 12px;
-    			text-align:left;
-    			color: black;
-    			text-align: center;
-			}
+              width: 200px;
+              height: 25px;
+              border: 1px solid #6a2219;
+              margin-bottom: 10px; 
+              background-color: #ffffff;      
+              font-family: Ayuthaya;
+          font-size  : 12px;
+          text-align:left;
+          color: black;
+          text-align: center;
+      }
 .signup-box input[type='password'] {  
-          		width: 200px;
-          		height: 25px;
-          		border: 1px solid #6a2219;
-          		margin-bottom: 10px;
-          		background-color: #ffffff;
-          		font-family: Ayuthaya;
-    			font-size  : 12px;
-    			text-align:left;
-    			color: black;
-    			text-align: center;
-			}
+              width: 200px;
+              height: 25px;
+              border: 1px solid #6a2219;
+              margin-bottom: 10px;
+              background-color: #ffffff;
+              font-family: Ayuthaya;
+          font-size  : 12px;
+          text-align:left;
+          color: black;
+          text-align: center;
+      }
 .signup-box form button {
           width: 120px;
           margin: auto;
@@ -351,7 +351,7 @@ input, select {
           color            : #e6e6e6;
     }
 .signup-box{
-	 width: 500px;
+   width: 500px;
   height: 400px;
   background-color: #f6f4ee;
   color: #fff;
@@ -366,13 +366,12 @@ input, select {
 /*PJ.html*/
 .cuadro{
   width: 1000px;
-  height: 100%;
+  height: 4000px;
   background-color: #f6f4ee;
   color: #6a2219;
-  top: 50%;
-  left: 50%;
+  left: 10%;
   position: absolute;
-  transform: translate(-50%,-50%);
+  
   box-sizing: border-box;
   border-radius: 5px; 
 }
@@ -428,8 +427,7 @@ input, select {
   box-sizing: border-box;
   position: absolute;
   left: 10px; 
-  padding: 50px 50px;
-  margin-bottom: 50px; 
+  padding: 50px 50px; 
 }
 .titulo h2 {
   font-family: Avenir;
@@ -449,7 +447,7 @@ input, select {
 }
 .encuadre{
   width: 1000px;
-  height: 100%ß;
+  height: 100%;
   padding-left: 30px;
   position: absolute;
   top: 150px;
@@ -479,6 +477,7 @@ input, select {
     padding: 4px 4px;
 }
 .estadistica tr{
+  width: 850;
   height: 40px;
 }
 .estadistica tr td input[type='text']{
@@ -497,9 +496,9 @@ input, select {
   color: #6a2219;
 }
 /*Toda la pagina web*/
-body{	
-		background-color:  #6a2219;
-	}
+body{ 
+    background-color:  #6a2219;
+  }
 a{
   text-decoration: none;
 }
