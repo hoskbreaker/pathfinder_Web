@@ -351,7 +351,7 @@ input, select {
           color            : #e6e6e6;
     }
 .signup-box{
-   width: 500px;
+  width: 500px;
   height: 400px;
   background-color: #f6f4ee;
   color: #fff;
@@ -369,9 +369,9 @@ input, select {
   height: 4000px;
   background-color: #f6f4ee;
   color: #6a2219;
-  left: 10%;
+  left: 50%;
   position: absolute;
-  
+  transform: translate(-50%,10px);
   box-sizing: border-box;
   border-radius: 5px; 
 }
