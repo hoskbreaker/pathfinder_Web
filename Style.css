@@ -365,7 +365,7 @@ input, select {
 
 /*PJ.html*/
 .cuadro{
-  width: 800px;
+  width: 1000px;
   height: 100%;
   background-color: #f6f4ee;
   color: #6a2219;
@@ -375,20 +375,6 @@ input, select {
   transform: translate(-50%,-50%);
   box-sizing: border-box;
   border-radius: 5px; 
-  text-align: center;
-}
-.cuadro ul{
-  float: left;
-}
-.cuadro ul li{
-  float: left;
-  list-style: none;
-}
-.cuadro ul li a{
-  font-family: century gothic;
-  font-size: 25px;
-  color: black;
-  padding-left: 40px;
 }
 .cuadro form{
   float: left;
@@ -437,17 +423,21 @@ input, select {
 }
 /* CS.html*/
 .titulo{
-  width: 800px;
+  width: 1000px;
   height: 50px;
-  position: top;
+  box-sizing: border-box;
+  padding: 50px 50px;
+  margin-bottom: 50px; 
+}
+.titulo h2 {
+  font-family: Avenir;
+  font-size: 30px;
+  color: #6a2219;
   text-align: center;
-  padding: 50px 50px; 
 }
 .titulo ul{
-  float: left;
 }
 .titulo ul li{
-  float: left;
   list-style: none;
 }
 .titulo ul li a{
@@ -456,19 +446,20 @@ input, select {
   color: black;
 }
 .encuadre{
-  width: 800px;
+  width: 1000px;
   height: 100%;
-  position: bottom;
+  box-sizing: border-box;
   padding-left: 30px;
 }
 .encuadre table{
-    width: 600px;
+    width: 850px;
     text-align:center;
     font-family: Ayuthaya;
-    font-size  : 12px;
+    font-size  : 14px;
     margin: auto; 
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     vertical-align: middle;
+    margin-left: 10px;
 }
 .encuadre table input[type='text']{
             width: 100%;
@@ -492,27 +483,27 @@ input, select {
   font-size: 14px;
 }
 .descripcion td{
-  font-size: 6px;
+  font-size: 10px;
   
 }
-/*Toda la pagina web*/
-body{	
-		background-color:  #6a2219;
-	}
-h2 {
-  font-family: Avenir;
-  font-size: 30px;
-  float: left;
-  padding-left: 125px;
-  color: #6a2219;
-}
-h3{
+.encuadre h3{
   margin-bottom: 10px;
   font-family: Avenir;
   font-size: 20px;
   text-align: center;
   color: #6a2219;
 }
+.encuadre form h3{
+  margin-bottom: 10px;
+  font-family: Avenir;
+  font-size: 20px;
+  text-align: center;
+  color: #6a2219;
+}
+/*Toda la pagina web*/
+body{	
+		background-color:  #6a2219;
+	}
 a{
   text-decoration: none;
 }

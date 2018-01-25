@@ -21,9 +21,11 @@ if($_SESSION["loggedin"]==False){
 			<h2>Hoja de Personaje</h2>
 		</div>
 		<div class="encuadre">
-			<h3>General</h3>
 			<form>
 				<table>
+					<tr>
+						<td colspan="6"><h3>General</h3></td>
+					</tr>
 					<tr>
 						<td colspan="3">Nombre: <input type="text" id="nombre" /></td>
 						<td>Alineamiento: <input type="text" id="alineamiento" /></td> 
@@ -43,8 +45,10 @@ if($_SESSION["loggedin"]==False){
 						<td>Ojos: <input type="text" id="ojos" /></td>
 					</tr> 
 				</table>
-				<h3>Estadistica</h3>
 				<table class="estadistica">
+					<tr>
+						<td colspan="15"><h3>Estadisticas</h3></td>
+					</tr>
 					<tr>
 						<td>Fue</td>
 						<td><input type="text" /></td>
@@ -96,8 +100,6 @@ if($_SESSION["loggedin"]==False){
 						<td><input type="text" /></td>
 						<td><input type="text" /></td>
 					</tr>
-				</table>
-				<table >
 					<tr class="descripcion">
 						<td>Inteligencia</td>
 						<td>Puntuación</td>
