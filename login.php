@@ -1,9 +1,5 @@
- <?php
-session_start();
-?>
-
 <?php
-
+session_start();
 $host_db = "localhost";
 $user_db = "pi";
 $pass_db = "raspberry";
@@ -41,14 +37,13 @@ $count = mysqli_num_rows($result);
 //if ($compare==TRUE) { 
 if ($count==1) { 
  
-    $_SESSION['loggedin'] = true;
+    $_SESSION["id"] = "SI";
     $_SESSION['username'] = $user;
     $_SESSION['start'] = time();
     $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
 
-    echo "Logueate! " . $_SESSION['username'];
 	sleep(3);
-    header("location:inicio.html");
+    header("location:inicio.php");
 } else { 
    echo "Username o Password estan incorrectos.";
    header("location:Log_in.html");
