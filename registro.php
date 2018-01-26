@@ -11,9 +11,9 @@ $pass_db = "raspberry";
 $db_name = "login";
 $tbl_name = "usuarios";
  
- $form_pass = $_POST['pass'];
+ $pass = $_POST['pass'];
  
- $hash = password_hash($form_pass, PASSWORD_DEFAULT); 
+ //$hash = password_hash($pass, PASSWORD_DEFAULT); 
 
  $conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
 
@@ -30,23 +30,16 @@ $email=$_POST['email'];
  $count = mysqli_num_rows($result);
 
  if ($count == 1) {
-	 echo "<br />". "El Nombre de Usuario ya a sido tomado." . "<br />";
-	 sleep(3);
-	 header("location:Log_in.html");
+	 header("location:Signup.html");
  }else{
 	$query = "INSERT INTO $tbl_name (username, password, email)
-		   VALUES ('$user', '$hash', '$email')";
+		   VALUES ('$user', '$pass', '$email')";
 
 	if ($conexion->query($query) === TRUE) {
-	 
-	 echo "<br />" . "<h2>" . "Usuario Creado Exitosamente!" . "</h2>";
-	 echo "<h4>" . "Bienvenido: " . $user . "</h4>" . "\n\n";
-	 sleep(3);
-	 header("location:Log_in.html");
+	 	 sleep(3);
+		header("location:Log_in.html");
 	}else {
-	 echo "Error al crear el usuario." . $query . "<br>" . $conexion->error; 
-	 sleep(3);
-	 header("location:Signup.html");
+		header("location:Signup.html");
 	}
 }
  mysqli_close($conexion);
