@@ -22,19 +22,19 @@ if($_POST['user'] == '' or $_POST['pass'] == '' or $_POST['repass'] == '' or POS
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 //$hash = password_hash($pass, PASSWORD_DEFAULT); 
-$sql = "SELECT id FROM $tbl_name WHERE username = '$user' and password = '$pass'";
+$sql = "SELECT * FROM $tbl_name WHERE username = '$user' and password = '$pass'";
 //$aux = "SELECT * FROM $tbl_name";
 $result = mysqli_query($conexion,$sql);
 //$rlt = mysqli_query($conexion,$aux);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 //col = mysqli_fetch_array($rlt,MYSQLI_ASSOC);
-$active = $row['active'];
-//$passwd= $col['password'];
+//$active = $row['active'];
+//$passwd= $row['password'];//lo de dentro es el nombre que tiene la columna de contraseñas en mysql
 
-//$compare=password_verify($pass,$passwd)
+//$compare=password_verify($hash,$passwd);
 $count = mysqli_num_rows($result);
 
-//if ($compare==TRUE) { 
+//if ($compare==true) { 
 if ($count==1) { 
  
     $_SESSION["id"] = "SI";
