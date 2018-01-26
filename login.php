@@ -21,16 +21,24 @@ if($_POST['user'] == '' or $_POST['pass'] == '' or $_POST['repass'] == '' or POS
 	header("location:Log_in.html");
 }
 
+//lo comentado así es para deshashear una contraseña. no funciona
+
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 //$hash = password_hash($pass, PASSWORD_DEFAULT); 
 $sql = "SELECT id FROM $tbl_name WHERE username = '$user' and password = '$pass'";
+//$aux = "SELECT * FROM $tbl_name";
 $result = mysqli_query($conexion,$sql);
+//$rlt = mysqli_query($conexion,$aux);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+//col = mysqli_fetch_array($rlt,MYSQLI_ASSOC);
 $active = $row['active'];
+//$passwd= $col['password'];
 
+//$compare=password_verify($pass,$passwd)
 $count = mysqli_num_rows($result);
 
+//if ($compare==TRUE) { 
 if ($count==1) { 
  
     $_SESSION['loggedin'] = true;
