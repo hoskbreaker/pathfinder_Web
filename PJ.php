@@ -13,7 +13,6 @@ if($_SESSION["id"]!="SI"){
 	<title>Pathfinder</title>
 	<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
-
 <body>
 	<div class="cuadro">
 		<div class="titulo">

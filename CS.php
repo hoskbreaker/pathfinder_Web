@@ -13,7 +13,7 @@ if($_SESSION["id"]!="SI"){
 	<title>Pathfinder</title>
 	<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
-
+<script language="JavaScript" src="PJ.js"> </script>
 <body>
 		<div class="cuadro">
 			<div class="titulo">
