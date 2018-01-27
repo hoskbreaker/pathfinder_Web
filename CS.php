@@ -13,7 +13,6 @@ if($_SESSION["id"]!="SI"){
 	<title>Pathfinder</title>
 	<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
-<script language="JavaScript" src="PJ.js"> </script>
 <body>
 		<div class="cuadro">
 			<div class="titulo">
@@ -29,16 +28,16 @@ if($_SESSION["id"]!="SI"){
 							<td colspan="6"><h3>General</h3></td>
 						</tr>
 						<tr>
-							<td colspan="3">Nombre: <input type="text" id="nombre" /></td>
-							<td>Alineamiento: <input type="text" id="alineamiento" /></td> 
-							<td colspan="2">Nombre del Jugador: <input type="text" id="jugador" /></td>
+							<td colspan="3">Nombre: <input type="text" id="nombre" value=''/></td>
+							<td>Alineamiento: <input type="text" id="alineamiento" value='' /></td> 
+							<td colspan="2">Nombre del Jugador: <input type="text" id="jugador" value=''/></td>
 						</tr>
 						<tr>
-							<td>Clase: <input type="text" id="clas" /></td>
-							<td>Nivel: <input type="text" id="niv" /></td> 
-							<td colspan="2">Deidad: <input type="text" id="deidad" /></td> 
-							<td colspan="2">Tierra natal: <input type="text" id="homeland" /></td>
-						</tr>
+							<td>Clase: <input type="text" id="clas" value='' /></td>
+							<td>Nivel: <input type="text" id="niv" value='' /></td> 
+							<td colspan="2">Deidad: <input type="text" id="deidad" value='' /></td> 
+							<td colspan="2">Tierra natal: <input type="text" id="homeland" value='' /></td>
+						</tr>						
 						<tr>
 							<td>Raza: <input type="text" id="raza" /></td> 
 							<td>Tamaño: <input type="text" id="tam" /></td> 
