@@ -34,7 +34,8 @@ if($_SESSION["id"]!="SI"){
 							<td colspan="2">Nombre del Jugador: <input type="text" id="jugador" /></td>
 						</tr>
 						<tr>
-							<td colspan="2">Clase y Nivel: <input type="text" id="clasniv" /></td> 
+							<td>Clase: <input type="text" id="clas" /></td>
+							<td>Nivel: <input type="text" id="niv" /></td> 
 							<td colspan="2">Deidad: <input type="text" id="deidad" /></td> 
 							<td colspan="2">Tierra natal: <input type="text" id="homeland" /></td>
 						</tr>
