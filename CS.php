@@ -33,22 +33,17 @@ if($_SESSION["id"]!="SI"){
 							<td colspan="2">Nombre del Jugador: <input type="text" id="jugador" value=''/></td>
 						</tr>
 						<tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 							<td>Clase: <input type="text" id="clas" value='' /></td>
 							<td>Nivel: <input type="text" id="niv" value='' /></td> 
 							<td colspan="2">Deidad: <input type="text" id="deidad" value='' /></td> 
 							<td colspan="2">Tierra natal: <input type="text" id="homeland" value='' /></td>
 						</tr>						
-=======
-=======
->>>>>>> 07f9592cdf38af3c16fb792797ee2d0b2a086e48
 							<td colspan="2">Clase: <input type="text" id="clas" /></td>
 							<td>Nivel: <input type="text" id="niv" /></td> 
 							<td>Deidad: <input type="text" id="deidad" /></td> 
 							<td colspan="2">Tierra natal: <input type="text" id="homeland" /></td>
 						</tr>
->>>>>>> 07f9592cdf38af3c16fb792797ee2d0b2a086e48
 						<tr>
 							<td>Raza: <input type="text" id="raza" /></td> 
 							<td>Tamaño: <input type="text" id="tam" /></td> 
