@@ -12,6 +12,25 @@ if($_SESSION["id"]!="SI"){
 <head>
 	<title>Pathfinder</title>
 	<link rel="stylesheet" type="text/css" href="Style.css">
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script>
+    $(document).on('ready',function(){
+
+      $('#resp').everyTime("30000",function(){
+        var url = "savePJ.php";                                      
+
+        $.ajax({                        
+           type: "POST",                 
+           url: url,                    
+           data: $("#formulario").serialize(),
+           success: function(data)            
+           {
+             $('#resp').html(data);           
+           }
+         });
+      });
+    });
+    </script>
 </head>
 <body>
 		<div class="cuadro">
@@ -22,7 +41,7 @@ if($_SESSION["id"]!="SI"){
 				<h2>Hoja de Personaje</h2>
 			</div>
 			<div class="encuadre">
-				<form>
+				<form id="formulario" method="POST">
 					<table>
 						<tr>
 							<td colspan="6"><h3>General</h3></td>
@@ -33,17 +52,13 @@ if($_SESSION["id"]!="SI"){
 							<td colspan="2">Nombre del Jugador: <input type="text" id="jugador" value=''/></td>
 						</tr>
 						<tr>
-
-							<td>Clase: <input type="text" id="clas" value='' /></td>
+							
+							<td colspan="2">Clase: <input type="text" id="clas" value='' /></td>
 							<td>Nivel: <input type="text" id="niv" value='' /></td> 
-							<td colspan="2">Deidad: <input type="text" id="deidad" value='' /></td> 
+							<td>Deidad: <input type="text" id="deidad" value='' /></td> 
 							<td colspan="2">Tierra natal: <input type="text" id="homeland" value='' /></td>
 						</tr>						
-							<td colspan="2">Clase: <input type="text" id="clas" /></td>
-							<td>Nivel: <input type="text" id="niv" /></td> 
-							<td>Deidad: <input type="text" id="deidad" /></td> 
-							<td colspan="2">Tierra natal: <input type="text" id="homeland" /></td>
-						</tr>
+						<output id="resp"></output>
 						<tr>
 							<td>Raza: <input type="text" id="raza" /></td> 
 							<td>Tamaño: <input type="text" id="tam" /></td> 
