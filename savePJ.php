@@ -24,7 +24,7 @@ $level=$_POST['niv'];
 $god=$_POST['deidad'];
 $hl=$_POST['homeland'];
 $buscarPersonaje = "SELECT * FROM $tbl_name
- WHERE personaje = '$name' ";
+ WHERE nombre = '$name' ";
 
  $result = $conexion->query($buscarPersonaje);
 
@@ -33,7 +33,7 @@ $buscarPersonaje = "SELECT * FROM $tbl_name
  if ($count == 1) {
 	 // header("location:Signup.html");
  }else{
-	$query = "INSERT INTO $tbl_name (personaje, alineamiento, jugador, clase, nivel, dios, tierra)
+	$query = "INSERT INTO $tbl_name (nombre, alineamiento, jugador, clase, nivel, dios, tierra)
 		   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl')";
 
 	if ($conexion->query($query) === TRUE) {
