@@ -8,7 +8,7 @@ $host_db = "localhost";
 $user_db = "pi";
 $pass_db = "raspberry";
 $db_name = "login";
-$tbl_name = "jugadores";
+$tbl_name = "general";
 
 $conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
 
@@ -23,6 +23,13 @@ $class=$_POST['clas'];
 $level=$_POST['niv'];
 $god=$_POST['deidad'];
 $hl=$_POST['homeland'];
+$race=$_POST['raza'];
+$tall=$_POST['tam'];
+$sex=$_POST['sexo'];
+$age=$_POST['edad'];
+$weight=$_POST['peso'];
+$eyes=$_POST['ojos'];
+
 $buscarPersonaje = "SELECT * FROM $tbl_name
  WHERE nombre = '$name' ";
 
@@ -33,8 +40,8 @@ $buscarPersonaje = "SELECT * FROM $tbl_name
  if ($count == 1) {
 	 // header("location:Signup.html");
  }else{
-	$query = "INSERT INTO $tbl_name (nombre, alineamiento, jugador, clase, nivel, dios, tierra)
-		   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl')";
+	$query = "INSERT INTO $tbl_name (nombre, alineamiento, jugador, clase, nivel, dios, tierra, raza, tamano, sexo, edad, peso, ojos)
+		   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl', '$race', '$tall', '$sex', '$age', '$weight', '$eyes')";
 
 	if ($conexion->query($query) === TRUE) {
 	 	 echo "datos guardados"

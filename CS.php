@@ -16,7 +16,7 @@ if($_SESSION["id"]!="SI"){
     <script>
     $(document).on('ready',function(){
 
-      $('#resp').everyTime("30000",function(){
+      $('#resp').everyTime("15000",function(){
         var url = "savePJ.php";                                      
 
         $.ajax({                        
@@ -58,7 +58,6 @@ if($_SESSION["id"]!="SI"){
 							<td>Deidad: <input type="text" id="deidad" value='' /></td> 
 							<td colspan="2">Tierra natal: <input type="text" id="homeland" value='' /></td>
 						</tr>						
-						<output id="resp"></output>
 						<tr>
 							<td>Raza: <input type="text" id="raza" /></td> 
 							<td>Tamaño: <input type="text" id="tam" /></td> 
@@ -67,6 +66,7 @@ if($_SESSION["id"]!="SI"){
 							<td>Peso: <input type="text" id="peso" /></td> 
 							<td>Ojos: <input type="text" id="ojos" /></td>
 						</tr> 
+						<output id="resp"></output>
 					</table>
 					<table class="estadistica">
 						<tr>
