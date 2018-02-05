@@ -1,20 +1,37 @@
-#javascript code
-var general{
-	var nombre='';
-	var alineamiento='';
-	var jugador='';
-	var clas='';
-	var niv='';
-	var deidad='';
-	var homeland ='';
-}
-
-function guardar_general(){
-	general.nombre=document.getElementById("nombre").value;
-	general.alineamiento=document.getElementById("alineamiento").value;
-	general.jugador=document.getElementById("jugador").value;
-	general.clas=document.getElementById("clas").value;
-	general.niv=document.getElementById("niv").value;
-	general.deidad=document.getElementById("deidad").value;
-	general.homeland=document.getElementById("homeland").value;
-}
+$(document).ready(function(){
+	setInterval(function(){
+        var url = "savePJ.php";
+		var general={
+			nombre: $('#nombre').val(),
+			alineamiento: $('#alineamiento').val(),
+			jugador: $('#jugador').val(),
+			clas: $('#clas').val(),
+			niv: $('#niv').val(),
+			deidad: $('#deidad').val(),
+			homeland: $('#homeland').val(),
+			raza: $('#raza').val(),
+			tam: $('#tam').val(),
+			sexo: $('#sexo').val(),
+			edad: $('#edad').val(),
+			peso: $('#peso').val(),
+			ojos: $('#ojos').val(),
+		}
+        $.ajax({                        
+           type: "POST",                 
+           url: url,                    
+           //data: $("#formulario").serializeArray(),
+		   data: {"general":JSON.stringify(general)},
+		   //data:general.serialize(),
+           success: function(data)            
+           {
+             $('#resp').innerHTML = "datos guardados";
+				alert("datos guardados");
+           },
+		   error: function(){
+			   alert("error al guardar");
+		   }		   
+         });
+           console.log(data);
+      },5000);
+      
+    });

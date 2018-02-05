@@ -13,35 +13,7 @@ if($_SESSION["id"]!="SI"){
 	<title>Pathfinder</title>
 	<link rel="stylesheet" type="text/css" href="Style.css">
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script>
-    $(document).on('ready',function(){
-
-  
-     
-     setInterval(function(){
-     	/*
-        var url = "savePJ.php";                                      
-
-        $.ajax({                        
-           type: "POST",                 
-           url: url,                    
-           data: $("#formulario").serialize(),
-           success: function(data)            
-           {
-             $('#resp').innerHTML = "datos guardados";
-				alert("datos guardados");
-           },
-		   error: function(){
-			   alert("error al guardar");
-		   }		   
-         });
-         */
-           console.log($("#formulario").serialize());
-      },5000);
-      
-    });
-   
-    </script>
+	<script type="text/javascript" src="PJ.js"></script>
 </head>
 <body>
 		<div class="cuadro">
