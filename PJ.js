@@ -8,6 +8,7 @@ var general{
 	var deidad='';
 	var homeland ='';
 }
+
 function guardar_general(){
 	general.nombre=document.getElementById("nombre").value;
 	general.alineamiento=document.getElementById("alineamiento").value;
