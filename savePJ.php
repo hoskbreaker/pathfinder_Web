@@ -44,9 +44,9 @@ $buscarPersonaje = "SELECT * FROM $tbl_name
 		   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl', '$race', '$tall', '$sex', '$age', '$weight', '$eyes')";
 
 	if ($conexion->query($query) === TRUE) {
-	 	 echo "datos guardados"
+	 	 echo "datos guardados";
 	}else {
-		echo "error en el guardado de datos"
+		echo "error en el guardado de datos";
 	}
 }
  mysqli_close($conexion);
