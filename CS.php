@@ -12,25 +12,8 @@ if($_SESSION["id"]!="SI"){
 <head>
 	<title>Pathfinder</title>
 	<link rel="stylesheet" type="text/css" href="Style.css">
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script>
-    $(document).on('ready',function(){
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 
-      $('#resp').everyTime("15000",function(){
-        var url = "savePJ.php";                                      
-
-        $.ajax({                        
-           type: "POST",                 
-           url: url,                    
-           data: $("#formulario").serialize(),
-           success: function(data)            
-           {
-             $('#resp').html(data);           
-           }
-         });
-      });
-    });
-    </script>
 </head>
 <body>
 		<div class="cuadro">
@@ -66,7 +49,7 @@ if($_SESSION["id"]!="SI"){
 							<td>Peso: <input type="text" id="peso" /></td> 
 							<td>Ojos: <input type="text" id="ojos" /></td>
 						</tr> 
-						<output id="resp"></output>
+						<div id="resp"></div>
 					</table>
 					<table class="estadistica">
 						<tr>
@@ -776,6 +759,29 @@ if($_SESSION["id"]!="SI"){
 				</form>
 			</div>
 		</div>
+	<script>
+    $(document).on('ready',function(){
+
+     // $('#resp').setInterval(function(){
+     setInterval(function(){
+        var url = "savePJ.php";                                      
+
+        $.ajax({                        
+           type: "POST",                 
+           url: url,                    
+           data: $("#formulario").serialize(),
+           success: function(data)            
+           {
+             $('#resp').innerHTML = "datos guardados";
+				alert("datos guardados");
+           },
+		   error: function(){
+			   alert("error al guardar");
+		   }		   
+         });
+      },5000);
+    });
+    </script>
 </body>
 </meta>
 </html>
