@@ -13,7 +13,35 @@ if($_SESSION["id"]!="SI"){
 	<title>Pathfinder</title>
 	<link rel="stylesheet" type="text/css" href="Style.css">
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script>
+    $(document).on('ready',function(){
 
+  
+     
+     setInterval(function(){
+     	/*
+        var url = "savePJ.php";                                      
+
+        $.ajax({                        
+           type: "POST",                 
+           url: url,                    
+           data: $("#formulario").serialize(),
+           success: function(data)            
+           {
+             $('#resp').innerHTML = "datos guardados";
+				alert("datos guardados");
+           },
+		   error: function(){
+			   alert("error al guardar");
+		   }		   
+         });
+         */
+           console.log($("#formulario").serialize());
+      },5000);
+      
+    });
+   
+    </script>
 </head>
 <body>
 		<div class="cuadro">
@@ -759,37 +787,7 @@ if($_SESSION["id"]!="SI"){
 				</form>
 			</div>
 		</div>
-	<script>
-    $(document).on('ready',function(){
 
-<<<<<<< HEAD
-      $('#resp').setInterval(function(){
-=======
-     // $('#resp').setInterval(function(){
-     setInterval(function(){
->>>>>>> df4dea5d39e1440d4c1a1d546118371c1aa117f0
-        var url = "savePJ.php";                                      
-
-        $.ajax({                        
-           type: "POST",                 
-           url: url,                    
-           data: $("#formulario").serialize(),
-           success: function(data)            
-           {
-             $('#resp').innerHTML = "datos guardados";
-				alert("datos guardados");
-<<<<<<< HEAD
-           }
-=======
-           },
->>>>>>> df4dea5d39e1440d4c1a1d546118371c1aa117f0
-		   error: function(){
-			   alert("error al guardar");
-		   }		   
-         });
-      },5000);
-    });
-    </script>
 </body>
 </meta>
 </html>
