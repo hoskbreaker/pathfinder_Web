@@ -762,7 +762,12 @@ if($_SESSION["id"]!="SI"){
 	<script>
     $(document).on('ready',function(){
 
+<<<<<<< HEAD
       $('#resp').setInterval(function(){
+=======
+     // $('#resp').setInterval(function(){
+     setInterval(function(){
+>>>>>>> df4dea5d39e1440d4c1a1d546118371c1aa117f0
         var url = "savePJ.php";                                      
 
         $.ajax({                        
@@ -773,7 +778,11 @@ if($_SESSION["id"]!="SI"){
            {
              $('#resp').innerHTML = "datos guardados";
 				alert("datos guardados");
+<<<<<<< HEAD
            }
+=======
+           },
+>>>>>>> df4dea5d39e1440d4c1a1d546118371c1aa117f0
 		   error: function(){
 			   alert("error al guardar");
 		   }		   
