@@ -14,7 +14,7 @@ if ($conexion->connect_error) {
 if($_POST['user'] == '' or $_POST['pass'] == '' or $_POST['repass'] == '' or POST['email'] == '')
 { 
 	echo 'Por favor llene todos los campos.';
-	header("location:Log_in.html");
+	header("location:login.html");
 }
 
 //lo comentado así es para deshashear una contraseña. no funciona
@@ -46,7 +46,7 @@ if ($count==1) {
     header("location:inicio.php");
 } else { 
    echo "Username o Password estan incorrectos.";
-   header("location:Log_in.html");
+   header("location:login.html");
 }
  mysqli_close($conexion); 
  ?>
