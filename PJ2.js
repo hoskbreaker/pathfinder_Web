@@ -1,11 +1,11 @@
 $(document).ready(function(){
     //live feed
     var ajaxCall=function(){
-        $("#formulario").ajaxSubmit(function(e){
+        $("#formulario").Submit(function(e){
             ajax_submit();
         });
     }
-    setInterval(ajaxCall,1000);
+    setInterval(ajaxCall,15000);
 
     //real submit
     $("#formulario").ajaxForm(function(e){

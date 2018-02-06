@@ -1,12 +1,10 @@
 	<?php 
 
 	session_start();
-	/*
 	if($_SESSION["id"]!="SI"){ 
 		echo "no se ha iniciado sesion";
 		header('Location:login.html');
 	}
-	*/
 	?>
 	<!doctype html>
 
@@ -16,7 +14,7 @@
 		<title>NWT | Personajes</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="PJ.js"></script>
+		<script type="text/javascript" src="PJ2.js"></script>
 	</head>
 
 	<body>
@@ -27,7 +25,7 @@
 				</div>
 				<nav>
 					<form action="logout.php" method="POST">
-						<input type="text" name="Username" value=<?= ".$_SESSION['username']."; ?> readonly> <!--Nombre del Usuario Logged In-->
+						<input type="text" name="Username" value="<?php echo $_SESSION['username']; ?>" readonly> <!--Nombre del Usuario Logged In-->
 						<button type="submit">Salir</button> 	<!--Boton de log out-->
 					</form>
 				</nav>
