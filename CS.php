@@ -49,7 +49,7 @@ if($_SESSION["id"]!="SI"){
 							<td>Peso: <input type="text" id="peso" /></td> 
 							<td>Ojos: <input type="text" id="ojos" /></td>
 						</tr> 
-						<div id="resp"></div>
+						<div id="resp" text="guardando..."></div>
 					</table>
 					<table class="estadistica">
 						<tr>
