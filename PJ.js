@@ -19,19 +19,19 @@ $(document).ready(function(){
         $.ajax({                        
            type: "POST",                 
            url: url,                    
-           data: $("#formulario").serialize(),
+           //data: $("#formulario").serializeArray(),
 		   //data: {"general":JSON.stringify(general)},
-		   //data:general.serialize(),
+		   data:$('#formulario').serialize(),
            success: function(data)            
            {
-				//$('#resp').innerHTML = "datos guardados";
-				$('#resp').fadeToggle(2000);				
+             $('#resp').innerHTML = "datos guardados";
+				alert("datos guardados");
            },
 		   error: function(){
 			   alert("error al guardar");
 		   }		   
-	 });
-	console.log($("#formulario").serialize());
-  },15000);
-  
-});
+         });
+           console.log($('#formulario').serialize());
+      },15000);
+      
+    });

@@ -2,31 +2,41 @@
 session_start();
 if($_SESSION["id"]!="SI"){ 
 	echo "no se ha iniciado sesion";
-	header('Location:Log_in.html');
+	header('Location:login.html');
 }
 ?>
 <!doctype html>
 
 <html>
-<meta charset="UTF-8">
 <head>
-	<title>Pathfinder</title>
-	<link rel="stylesheet" type="text/css" href="Style.css">
+	<meta charset="utf-8">
+	<title>NWT | Personajes</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-	<div class="cuadro">
-		<div class="titulo">
-			<ul>
-				<li><a href="inicio.php">Home</a></li>	
-			</ul>
-			<h2>Personajes</h2>
+	<header>
+		<div class="container">
+			<div id="branding">
+				<a href="inicio.php"><h1>NW<spam class="highlight">T</spam></h1></a>
+			</div>
+			<nav>
+				<form action="logout.php" method="POST">
+					<input type="text" name="Username" value="<?php echo $_SESSION['username']?>" readonly> <!--Nombre del Usuario Logged In-->
+					<button type="submit">Salir</button> 	<!--Boton de log out-->
+				</form>
+			</nav>
 		</div>
-		<div class="encuadre">
-			<form action="CS.php">
-				<button type="submit" name="submit">Crear Personaje</button>
-			</form>
-		</div>					
-	</div>	
+	</header>
+
+	<section class="recuadro">
+		<div class="Title">
+			<h1>Personajes</h1>
+			<hr>
+		</div>
+		<form action="CS.php">
+			<button type="submit">+</button>
+		</form>
+	</section>
 </body>
-</meta>
 </html>
