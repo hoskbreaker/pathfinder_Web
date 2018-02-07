@@ -38,7 +38,12 @@ $buscarPersonaje = "SELECT * FROM $tbl_name
 
  if ($count == 1) {
 	 // header("location:Signup.html");
-	 
+	 $query = "UPDATE $tbl_name SET nombre=$name, alineamiento=$alin, jugador=$player, clase=$class, nivel=$level, dios=$god, tierra=$hl, raza=$race, tamano=$tall, sexo=$sex, edad=$age, peso=$weight, ojos=$eyes";
+	 if ($conexion->query($query) === TRUE) {
+	 	 echo "datos actualizados";
+	}else {
+		echo "error al actualizar datos";
+	}
  }else{
 	$query = "INSERT INTO $tbl_name (nombre, alineamiento, jugador, clase, nivel, dios, tierra, raza, tamano, sexo, edad, peso, ojos)
 		   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl', '$race', '$tall', '$sex', '$age', '$weight', '$eyes')";
