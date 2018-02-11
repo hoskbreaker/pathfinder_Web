@@ -15,6 +15,7 @@ $conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
  if ($conexion->connect_error) {
 	die("La conexion falló: " . $conexion->connect_error);
 }
+
 $name=$_POST['nombre'];
 $alin=$_POST['alineamiento'];
 $player=$_POST['jugador'];
@@ -31,23 +32,39 @@ $eyes=$_POST['ojos'];
 
 $buscarPersonaje = "SELECT * FROM $tbl_name
  WHERE nombre = '$name' ";
-
  $result = $conexion->query($buscarPersonaje);
 
  $count = mysqli_num_rows($result);
+ $row = mysqli_fetch_row($result);
 
  if ($count == 1) {
-	 // header("location:Signup.html");
-	 $query = "UPDATE $tbl_name SET nombre=$name, alineamiento=$alin, jugador=$player, clase=$class, nivel=$level, dios=$god, tierra=$hl, raza=$race, tamano=$tall, sexo=$sex, edad=$age, peso=$weight, ojos=$eyes";
+	 echo "existe";
+	$query = "INSERT INTO $tbl_name
+	(nombre, alineamiento, jugador, clase, nivel, dios, tierra, raza, tamano, sexo, edad, peso, ojos)
+	   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl', '$race', '$tall', '$sex', '$age', '$weight', '$eyes');
+	   ON DUPLICATE KEY UPDATE nombre=VALUES(nombre),
+	   alineamiento=VALUES(alineamiento),
+	   jugador=VALUES(jugador),
+	   clase=VALUES(clase),
+	   nivel=VALUES(nivel),
+	   dios=VALUES(dios),
+	   tierra=VALUES(tierra),
+	   raza=VALUES(raza),
+	   tamano=VALUES(tamano),
+	   sexo=VALUES(sexo),
+	   edad=VALUES(sexo),
+	   peso=VALUES(peso),
+	   ojos=VALUES(ojos)";
+		
 	 if ($conexion->query($query) === TRUE) {
 	 	 echo "datos actualizados";
 	}else {
 		echo "error al actualizar datos";
 	}
  }else{
-	$query = "INSERT INTO $tbl_name (nombre, alineamiento, jugador, clase, nivel, dios, tierra, raza, tamano, sexo, edad, peso, ojos)
+	echo "no existe";
+		$query = "INSERT INTO $tbl_name (nombre, alineamiento, jugador, clase, nivel, dios, tierra, raza, tamano, sexo, edad, peso, ojos)
 		   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl', '$race', '$tall', '$sex', '$age', '$weight', '$eyes')";
-
 	if ($conexion->query($query) === TRUE) {
 	 	 echo "datos guardados";
 	}else {

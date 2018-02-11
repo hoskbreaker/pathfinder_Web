@@ -51,7 +51,7 @@
 					<tr>
 						<td colspan="3"><input type="text" id="nombre" name="nombre" /></td>
 						<td><input type="text" id="alineamiento" name="alineamiento" /></td> 
-						<td colspan="2"><input type="text" id="jugador" name="text" name="jugador"/></td>
+						<td colspan="2"><input type="text" id="jugador" name="jugador"/></td>
 					</tr>
 					<tr>
 						<td colspan="2">Clase:</td> 
