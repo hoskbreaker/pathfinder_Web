@@ -2,7 +2,7 @@ $(document).ready(function(){
 	setInterval(function(){
         var url = "savePJ.php";
         $.ajax({                        
-           type: "POST",                 
+           type: "POST",           
            url: url,                    
 		   data:$('#general').serialize(),
            success: function(data)            

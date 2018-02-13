@@ -30,45 +30,53 @@ $age=$_POST['edad'];
 $weight=$_POST['peso'];
 $eyes=$_POST['ojos'];
 
-$buscarPersonaje = "SELECT * FROM $tbl_name
- WHERE nombre = '$name' ";
+ // $buscarPersonaje = "SELECT * FROM $tbl_name WHERE nombre = '$name'";
+  $buscarPersonaje = "SELECT * FROM $tbl_name WHERE nombre = 'HOSK'";
  $result = $conexion->query($buscarPersonaje);
 
  $count = mysqli_num_rows($result);
+ // if ($row = mysql_fetch_row($result)) {
+	// $id = trim($row['IDpj']);
+// }
  $row = mysqli_fetch_row($result);
+ $id =$row[0];
 
  if ($count == 1) {
-	 echo "existe";
-	$query = "INSERT INTO $tbl_name
-	(nombre, alineamiento, jugador, clase, nivel, dios, tierra, raza, tamano, sexo, edad, peso, ojos)
-	   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl', '$race', '$tall', '$sex', '$age', '$weight', '$eyes');
-	   ON DUPLICATE KEY UPDATE nombre=VALUES(nombre),
-	   alineamiento=VALUES(alineamiento),
-	   jugador=VALUES(jugador),
-	   clase=VALUES(clase),
-	   nivel=VALUES(nivel),
-	   dios=VALUES(dios),
-	   tierra=VALUES(tierra),
-	   raza=VALUES(raza),
-	   tamano=VALUES(tamano),
-	   sexo=VALUES(sexo),
-	   edad=VALUES(sexo),
-	   peso=VALUES(peso),
-	   ojos=VALUES(ojos)";
+	 echo "existe\n";
+	 //$id=row['IDpj'];
+	$resp = "UPDATE $tbl_name 
+	SET nombre = '$name', 
+	alineamiento = '$alin', 
+	jugador = '$player', 
+	clase = '$class', 
+	nivel = '$level', 
+	dios = '$god', 
+	tierra='$hl', 
+	raza='$race', 
+	tamano='$tall', 
+	sexo='$sex', 
+	edad='$age', 
+	peso='$weight', 
+	ojos='$eyes' 
+	WHERE IDpj='$id'\n";
 		
-	 if ($conexion->query($query) === TRUE) {
+	 if ($conexion->query($resp) === TRUE) {
 	 	 echo "datos actualizados";
 	}else {
 		echo "error al actualizar datos";
+		echo $resp;
+		echo $conexion->error;
 	}
  }else{
-	echo "no existe";
-		$query = "INSERT INTO $tbl_name (nombre, alineamiento, jugador, clase, nivel, dios, tierra, raza, tamano, sexo, edad, peso, ojos)
+	echo "no existe\n";
+		$resp = "INSERT INTO $tbl_name (nombre, alineamiento, jugador, clase, nivel, dios, tierra, raza, tamano, sexo, edad, peso, ojos)
 		   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl', '$race', '$tall', '$sex', '$age', '$weight', '$eyes')";
-	if ($conexion->query($query) === TRUE) {
+	if ($conexion->query($resp) === TRUE) {
 	 	 echo "datos guardados";
 	}else {
 		echo "error en el guardado de datos";
+		echo $resp;
+		echo $conexion->error;
 	}
 }
  mysqli_close($conexion);
