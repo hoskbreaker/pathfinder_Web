@@ -74,8 +74,8 @@ $eyes=$_POST['ojos'];
 	 	 echo "datos guardados";
 		 $rw = mysqli_fetch_assoc($sol);
 		 $nid=$rw['IDpj'];
-		 $qry="INSERT INTO personajes (IDuser,IDchar) 
-		 VALUES ('$user',$nid')";
+		 $qry="INSERT INTO personajes (IDuser ,IDchar) 
+		 VALUES ('$user','$nid')";
 		 
 		 if ($conexion->query($qry) === TRUE) {
 			echo "personaje enlazado con usuario\n";
