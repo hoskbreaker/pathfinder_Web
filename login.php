@@ -1,53 +1,42 @@
 <?php
-session_start();
-$host_db = "localhost";
-$user_db = "pi";
-$pass_db = "raspberry";
-$db_name = "login";
-$tbl_name = "usuarios";
-$conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
+	session_start();
+?>
 
-if ($conexion->connect_error) {
- die("La conexion falló: " . $conexion->connect_error);
-}
+<!doctype html>
 
-if($_POST['user'] == '' or $_POST['pass'] == '' or $_POST['repass'] == '' or POST['email'] == '')
-{ 
-	echo 'Por favor llene todos los campos.';
-	header("location:login.html");
-}
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>NWT | Login</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
 
-//lo comentado así es para deshashear una contraseña. no funciona
-
-$user = $_POST['user'];
-$pass = $_POST['pass'];
-//$hash = password_hash($pass, PASSWORD_DEFAULT); 
-$sql = "SELECT * FROM $tbl_name WHERE username = '$user' and password = '$pass'";
-//$aux = "SELECT * FROM $tbl_name";
-$result = mysqli_query($conexion,$sql);
-//$rlt = mysqli_query($conexion,$aux);
-$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-//col = mysqli_fetch_array($rlt,MYSQLI_ASSOC);
-//$active = $row['active'];
-//$passwd= $row['password'];//lo de dentro es el nombre que tiene la columna de contraseñas en mysql
-
-//$compare=password_verify($hash,$passwd);
-$count = mysqli_num_rows($result);
-$row = mysqli_fetch_assoc($result);
-
-//if ($compare==true) { 
-if ($count==1) { 
-	$_SESSION['n_ID']=$row['ID'];
-    $_SESSION["id"] = "SI";
-    $_SESSION['username'] = $user;
-    $_SESSION['start'] = time();
-    $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
-
-	sleep(3);
-    header("location:inicio.php");
-} else { 
-   echo "Username o Password estan incorrectos.";
-   header("location:login.html");
-}
- mysqli_close($conexion); 
- ?>
+<body class="login">
+	
+	<section>
+		<div class="cuadro">
+			<div class="logbg">
+				<div class="Title">
+					<h1>LOG <spam class="highlight">IN</spam></h1>
+					<hr>
+				</div>
+				<div class="logform">
+					<div class="logform1">
+						<p>Inicie sesión aquí:</p>
+						<br>
+						<form action="./includes/login-inc.php" method="POST">
+							<input id="uid" type="text" name="uid" placeholder="E-mail/Nombre de Usuario" /><br>
+							<input id="pwd" type="password" name="pwd" placeholder="Contraseña" /><br>
+							<button id="submit" type="submit" name="submit">Entrar</button><br>
+						</form>
+						<a href="signup.php">Regístrate</a>
+					</div>	
+				</div>
+			</div>	
+			<div class="map"></div>	
+		</div>
+	</section>
+	
+</body>
+</meta>
+</html>
