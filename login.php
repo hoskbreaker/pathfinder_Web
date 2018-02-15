@@ -33,10 +33,11 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
 //$compare=password_verify($hash,$passwd);
 $count = mysqli_num_rows($result);
+$row = mysqli_fetch_assoc($result);
 
 //if ($compare==true) { 
 if ($count==1) { 
- 
+	$_SESSION['n_ID']=$row['ID'];
     $_SESSION["id"] = "SI";
     $_SESSION['username'] = $user;
     $_SESSION['start'] = time();

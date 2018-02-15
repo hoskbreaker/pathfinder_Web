@@ -66,10 +66,24 @@ $eyes=$_POST['ojos'];
 	}
  }else{
 	echo "no existe\n";
+		$user=$_SESSION['n_ID'];
 		$resp = "INSERT INTO $tbl_name (nombre, alineamiento, jugador, clase, nivel, dios, tierra, raza, tamano, sexo, edad, peso, ojos)
 		   VALUES ('$name', '$alin', '$player', '$class', '$level', '$god', '$hl', '$race', '$tall', '$sex', '$age', '$weight', '$eyes')";
-	if ($conexion->query($resp) === TRUE) {
+		$sol= $conexion->query($resp);
+	if ( $sol === TRUE) {
 	 	 echo "datos guardados";
+		 $rw = mysqli_fetch_assoc($sol);
+		 $nid=$rw['IDpj'];
+		 $qry="INSERT INTO personajes (IDuser,IDchar) 
+		 VALUES ('$user',$nid')";
+		 
+		 if ($conexion->query($qry) === TRUE) {
+			echo "personaje enlazado con usuario\n";
+		}else {
+			echo "error al enlazar personaje con usuario\n";
+			echo $qry;
+			echo $conexion->error;
+		}
 	}else {
 		echo "error en el guardado de datos";
 		echo $resp;
