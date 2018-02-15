@@ -88,6 +88,7 @@
 			</div>
 			<div class="estadistica">
 				<h3>Estadisticas</h3>
+				<form name="form_pj" id="estadisticas" action="" method="POST" class="form">
 				<table>
 					<tr>
 						<?php
@@ -160,9 +161,11 @@
 						<td>Modificador Temporal</td>
 					</tr>
 				</table>
+				</form>
 			</div>
 			<div class="general">
 				<h3>Defensa</h3>
+				<form name="form_pj" id="defensa" action="" method="POST" class="form">
 				<table>
 					<tr>
 						<td>CA</td>
@@ -296,9 +299,11 @@
 						<td colspan="4">Modificadores Temporales</td>
 					</tr>
 				</table>
+				</form>
 			</div>
 			<div class="general">
 				<h3>Ataque</h3>
+				<form name="form_pj" id="ataque" action="" method="POST" class="form">
 				<table>
 					<tr>
 						<td>Iniciativa</td>
@@ -359,6 +364,7 @@
 						<td colspan="3">Modificadores Temporales</td>
 					</tr>
 				</table>
+			    </form>
 			</div>
 		</section>
 		<!--</form>-->
