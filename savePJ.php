@@ -30,20 +30,15 @@ $age=$_POST['edad'];
 $weight=$_POST['peso'];
 $eyes=$_POST['ojos'];
 
- // $buscarPersonaje = "SELECT * FROM $tbl_name WHERE nombre = '$name'";
-  $buscarPersonaje = "SELECT * FROM $tbl_name WHERE nombre = 'HOSK'";
+ $buscarPersonaje = "SELECT * FROM $tbl_name WHERE nombre = '$name'";
  $result = $conexion->query($buscarPersonaje);
 
  $count = mysqli_num_rows($result);
- // if ($row = mysql_fetch_row($result)) {
-	// $id = trim($row['IDpj']);
-// }
- $row = mysqli_fetch_row($result);
- $id =$row[0];
+ $row = mysqli_fetch_assoc($result);
+ $id =$row['IDpj'];
 
  if ($count == 1) {
 	 echo "existe\n";
-	 //$id=row['IDpj'];
 	$resp = "UPDATE $tbl_name 
 	SET nombre = '$name', 
 	alineamiento = '$alin', 
@@ -61,7 +56,9 @@ $eyes=$_POST['ojos'];
 	WHERE IDpj='$id'\n";
 		
 	 if ($conexion->query($resp) === TRUE) {
-	 	 echo "datos actualizados";
+	 	 echo "datos actualizados\n";
+		 echo $id;
+		 
 	}else {
 		echo "error al actualizar datos";
 		echo $resp;
@@ -79,5 +76,19 @@ $eyes=$_POST['ojos'];
 		echo $conexion->error;
 	}
 }
+unset($id);
+unset($name);
+unset($alin);
+unset($player);
+unset($class);
+unset($level);
+unset($god);
+unset($hl);
+unset($race);
+unset($tall);
+unset($sex);
+unset($age);
+unset($weight);
+unset($eyes);
  mysqli_close($conexion);
 ?>
